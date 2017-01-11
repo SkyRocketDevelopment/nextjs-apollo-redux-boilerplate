@@ -1,7 +1,14 @@
 import React from 'react'
+import ApolloClient, { createNetworkInterface } from 'apollo-client';
+import { ApolloProvider } from 'react-apollo';
 import { Provider } from 'react-redux'
 import { initStore } from '../store'
 import Home from '../containers/home';
+
+const client = new ApolloClient({
+  networkInterface: createNetworkInterface({ uri: 'https://foodtruckserver.now.sh/graphql' })
+});
+
 /**
  * Component to show the home container.
  */
@@ -19,9 +26,11 @@ export default class App extends React.Component {
 
   render () {
     return (
-      <Provider store={this.store}>
-        <Home />
-      </Provider>
+      <ApolloProvider client={client}>
+        <Provider store={this.store}>
+          <Home />
+        </Provider>
+      </ApolloProvider>
     )
   }
 }
