@@ -14,6 +14,10 @@ class Layout extends Component {
           <title>{ title }</title>
           <meta charSet='utf-8'/>
           <meta name='viewport' content='initial-scale=1.0, width=device-width'/>
+          {/* Materialize css */}
+          <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" />
         </Head>
         <header>
           <nav>
@@ -27,6 +31,9 @@ class Layout extends Component {
         <footer>
           This is the footer
         </footer>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <script src="/static/init-carousel.js" />
       </div>
     )
   }

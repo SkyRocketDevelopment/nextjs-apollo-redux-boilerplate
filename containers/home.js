@@ -26,8 +26,6 @@ class Home extends Component {
 
   componentDidMount() {
     const { setString } = this.props;
-    console.log('properties: ', this.props);
-    alert('setting default demo string to store');
     setString();
   }
 
@@ -55,7 +53,20 @@ class Home extends Component {
         >
           change back to default
         </button>
-        <p>{demoString}</p>
+        <div className="carousel">
+          <a className="carousel-item" href="#one!"><img src="http://lorempixel.com/250/250/nature/1" /></a>
+          <a className="carousel-item" href="#two!"><img src="http://lorempixel.com/250/250/nature/2" /></a>
+          <a className="carousel-item" href="#three!"><img src="http://lorempixel.com/250/250/nature/3"/></a>
+          <a className="carousel-item" href="#four!"><img src="http://lorempixel.com/250/250/nature/4" /></a>
+          <a className="carousel-item" href="#five!"><img src="http://lorempixel.com/250/250/nature/5" /></a>
+        </div>
+        <div className="container">
+          <div className="row">
+            <div className="col s1">this is a row</div>
+            <div className="col s1">this is a row</div>
+          </div>
+          <p>{demoString}</p>
+        </div>
       </Layout>
     )
   }
